@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contentHolder">
+        <div class="contentLine">
+            <script>
+                for(let i = 1; i < 6; i++){
+                    document.write('<input type="number" id="'+ i +'" class="content img'+ i +'"></input>');
+                };
+            </script>
+                <div class="content ph1"></div>
+                <div class="content ph2"></div>
+                <input type="number" id="6" class="content img6"></input>
+        </div>
+        <div class="ilevelWrapper">
+            <h1 class="ilevelPosition ilevel1" id="total">0</h1> 
+            <div class="weaponsButtonWrapper">
+                <div style="display: flex; justify-content: center;">
+                    <input id="secondHand" style="height: 20px; width: 20px;" value="kek" type="checkbox" required checked>
+                </div>
+        <div class="contentWeapons">
+            <script>
+                for(let i = 7; i < 10; i++){
+                    document.write('<input type="number" id="'+ i +'" class="content img'+ i +'"></input>');
+                };
+            </script>
+        </div>
+        <button class="button" id="calculate">Calculate</button>
+    </div>
+    </div>
+        <div class="contentLine">
+            <script>
+                for(let i = 10; i < 18; i++){
+                    document.write('<input type="number" id="'+ i +'" class="content img'+ i +'"></input>');
+                };
+            </script>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("calculate").onclick = calculate
+    let total = 0;
+    let ilevelColor = document.querySelector('#total');
+    let secondHand = document.getElementById("secondHand");
+
+
+    function calculate(){
+        for(i = 1; i < 18; i++){
+            total += +document.getElementById(i).value;
+    }   
+            if(!secondHand.checked){
+                total -= +document.getElementById(8).value;
+                total = total / 16;
+            }
+            else{
+                total = total / 17;
+            }
+            if(total < 150){
+                ilevelColor.setAttribute('class', 'ilevelPosition ilevel1')
+            }
+            if(total > 150){
+                ilevelColor.setAttribute('class', 'ilevelPosition ilevel2')
+            }
+            if(total > 185){
+                ilevelColor.setAttribute('class', 'ilevelPosition ilevel3')
+            }
+            if(total >= 200){
+                ilevelColor.setAttribute('class', 'ilevelPosition ilevel4')
+            }
+            document.getElementById("total").innerHTML = Math.floor(total);
+            total = 0;
+    }
+</script>
