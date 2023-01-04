@@ -60,6 +60,9 @@ body{
 .ilevel4{
     color: rgb(161, 30, 255);
 }
+.ilevel5{
+    color: rgb(228, 148, 0);
+}
 .content{
     text-decoration: none;
     color: white;
@@ -71,25 +74,6 @@ body{
     font-size: 30px;
     background-repeat: no-repeat;
     margin: 0;
-    /* align-items: flex-end; */
-}
-.img1{
-    background-image: url(1.png);
-}
-.img2{
-    background-image: url(2.png);
-}
-.img3{
-    background-image: url(3.png);
-}
-.img4{
-    background-image: url(4.png);
-}
-.img5{
-    background-image: url(5.png);
-}
-.img6{
-    background-image: url(6.png);
 }
 .ph1{
     background-image: url(ph1.png);
@@ -97,39 +81,7 @@ body{
 .ph2{
     background-image: url(ph2.png);
 }
-.img7{
-    background-image: url(7.png);
-}
-.img8{
-    background-image: url(8.png);
-}
-.img9{
-    background-image: url(9.png);
-}
-.img10{
-    background-image: url(10.png);
-}
-.img11{
-    background-image: url(11.png);
-}
-.img12{
-    background-image: url(12.png);
-}
-.img13{
-    background-image: url(13.png);
-}
-.img14{
-    background-image: url(14.png);
-}
-.img15{
-    background-image: url(14.png);
-}
-.img16{
-    background-image: url(15.png);
-}
-.img17{
-    background-image: url(15.png);
-}
+
 input[type='number'] {
     -moz-appearance:textfield;
 }

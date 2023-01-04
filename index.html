@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="style.css">
+    <script>
+        for(let i = 1; i < 18; i++){
+            if(i == 15){
+       document.write('<style> .img'+i+'{background-image: url(14.png);}</style>');
+            }
+            else if(i == 17){
+        document.write('<style> .img'+i+'{background-image: url(16.png);}</style>')
+            }
+            else{
+       document.write('<style> .img'+i+'{background-image: url('+i+'.png);}</style>');
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="contentHolder">
@@ -52,7 +65,8 @@
     }   
             if(!secondHand.checked){
                 total -= +document.getElementById(8).value;
-                total = total / 16;
+                total += +document.getElementById(7).value;
+                total = total / 17;
             }
             else{
                 total = total / 17;
@@ -68,6 +82,9 @@
             }
             if(total >= 200){
                 ilevelColor.setAttribute('class', 'ilevelPosition ilevel4')
+            }
+            if(total >= 290){
+                ilevelColor.setAttribute('class', 'ilevelPosition ilevel5')
             }
             document.getElementById("total").innerHTML = Math.floor(total);
             total = 0;
